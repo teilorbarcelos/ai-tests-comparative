@@ -18,6 +18,7 @@ carregado na API — permitindo comparar **qualidade** e **desempenho** de forma
   - [2. Teste padrão (front + backend)](#2-teste-padrão-front--backend)
   - [3. Teste de estresse (opcional)](#3-teste-de-estresse-opcional)
 - [Como gerar o relatório de desempenho](#como-gerar-o-relatório-de-desempenho)
+- [Ranking dos melhores modelos](#ranking-dos-melhores-modelos)
 - [Como comparar modelos](#como-comparar-modelos)
 - [Resultados atuais](#resultados-atuais)
 - [Validação por execução real](#validação-por-execução-real)
@@ -136,6 +137,14 @@ powershell -ExecutionPolicy Bypass -File "plan/eval-script.ps1" `
 3. **Adicione a linha no comparativo** `results/COMPARATIVO.md` (e/ou `results-stress/COMPARATIVO.md`).
 
 Template pronto em [`plan/README.md`](plan/README.md) (seção "Template de report.md").
+
+---
+
+## Ranking dos melhores modelos
+
+Consulte o [**RANKING.md**](RANKING.md) para ver o ranking atualizado dos modelos por nota
+geral (qualidade) e velocidade, com o veredito de cada um. Ele é atualizado a cada modelo novo
+avaliado — o histórico fica versionado no git.
 
 ---
 
