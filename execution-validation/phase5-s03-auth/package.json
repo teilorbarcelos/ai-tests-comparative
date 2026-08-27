@@ -1,0 +1,21 @@
+{
+  "name": "phase5-s03-auth",
+  "version": "1.0.0",
+  "description": "Validacao por execucao - Fase 5: AuthService com DI (tarefa s03)",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.1",
+    "@types/node": "^20.11.6",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  }
+}

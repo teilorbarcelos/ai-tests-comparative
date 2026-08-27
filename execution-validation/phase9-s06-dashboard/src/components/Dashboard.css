@@ -1,0 +1,29 @@
+.dashboard {
+  padding: 1rem;
+}
+
+.status {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.error { color: red; }
+
+.filters {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .filters {
+    flex-direction: column;
+  }
+}

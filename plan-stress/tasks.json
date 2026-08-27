@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "api_base": "http://localhost:1234/v1",
+    "created": "2026-08-20",
+    "note": "Plano de ESTRESSE: tarefas de complexidade PROGRESSIVA (nivel 1 = basico, nivel 5 = extremo) para avaliar a capacidade maxima de um modelo em backend/frontend React/Node/TS. Separado do plano padrao para permitir comparacao de abrangencia."
+  },
+  "params": {
+    "temperature": 0.2,
+    "max_tokens": 8000
+  },
+  "tasks": [
+    {
+      "id": "s01-basico",
+      "level": 1,
+      "category": "backend",
+      "title": "Tipos avancados e genericos",
+      "task": "Escreva em TypeScript uma funcao generica `groupBy<T, K>(items: T[], keySelector: (item: T) => K): Map<K, T[]>` que agrupa uma lista por uma chave. Depois use tipos utilitarios (Record, Partial, Pick) e escreva um exemplo pratico agrupando uma lista de `Product` por categoria. Explique o codigo.",
+      "checkpoints": [
+        "Funcao generica com dois tipos T e K",
+        "Uso de Map<K, T[]>",
+        "Exemplo com tipos utilitarios",
+        "Explicacao clara"
+      ]
+    },
+    {
+      "id": "s02-basico",
+      "level": 1,
+      "category": "frontend",
+      "title": "Componente com hooks avancados",
+      "task": "Crie um componente React com TypeScript `Counter` com dois custom hooks: `useLocalStorage<T>(key, initialValue)` (persiste estado no localStorage) e um hook que rastreia o historico de valores. Use useReducer para o estado. Forneca codigo completo tipado e explique.",
+      "checkpoints": [
+        "Custom hook useLocalStorage com generico",
+        "useReducer para estado",
+        "Hook de historico de valores",
+        "Codigo tipado e explicacao"
+      ]
+    },
+    {
+      "id": "s03-intermediario",
+      "level": 2,
+      "category": "backend",
+      "title": "Servico com injeção de dependencia e padrões",
+      "task": "Implemente em TypeScript um sistema de autenticacao com: interface `UserRepository` (abstrata), implementacao `InMemoryUserRepository`, servico `AuthService` com login/registro/token, e um middleware de autorizacao. Use DI (construtor), handle de erros customizado e hashing de senha (simule com uma funcao hash). Estruture em modulos e explique a arquitetura.",
+      "checkpoints": [
+        "Interface abstrata + implementacao",
+        "DI via construtor",
+        "AuthService com login/registro/token",
+        "Middleware de autorizacao",
+        "Erros customizados e estrutura modular"
+      ]
+    },
+    {
+      "id": "s04-intermediario",
+      "level": 2,
+      "category": "frontend",
+      "title": "App React com roteamento e estado global",
+      "task": "Crie a estrutura de um app React com TypeScript usando React Router e Context API: um `AuthContext` (login/logout, usuario atual), rotas protegidas (ex.: /dashboard so para logado), e uma pagina de login. Inclua a tipagem de rotas e o fluxo de redirecionamento. Explique a arquitetura de estado.",
+      "checkpoints": [
+        "React Router com rotas",
+        "AuthContext com Context API",
+        "Rotas protegidas com redirecionamento",
+        "Tipagem de rotas",
+        "Explicacao da arquitetura"
+      ]
+    },
+    {
+      "id": "s05-avancado",
+      "level": 3,
+      "category": "backend",
+      "title": "API REST completa com validacao, banco e testes",
+      "task": "Construa uma API REST completa em Node+TypeScript+Express para um e-commerce de produtos: CRUD de produtos com validacao (zod), persistencia em um repositorio que simula banco (SQL em memoria ou array), paginacao/filtros, tratamento centralizado de erros, e testes unitarios (Jest) para o servico. Forneca todos os arquivos (tipos, servico, repositorio, controlador, rotas, testes) e instrucoes.",
+      "checkpoints": [
+        "CRUD completo de produtos",
+        "Validacao com zod",
+        "Paginacao e filtros",
+        "Tratamento centralizado de erros",
+        "Testes unitarios Jest",
+        "Todos os arquivos e instrucoes"
+      ]
+    },
+    {
+      "id": "s06-avancado",
+      "level": 3,
+      "category": "frontend",
+      "title": "Dashboard React com fetching, filtros e componentes reutilizaveis",
+      "task": "Crie um dashboard React com TypeScript que consome uma API simulada: use um hook customizado `useFetch<T>(url)` com estados de loading/erro/dados, uma lista de cards com filtros (busca e ordenacao), e componentes reutilizaveis (Button, Card, Input) tipados. Inclua estilizacao responsiva e explique o fluxo de dados.",
+      "checkpoints": [
+        "Hook useFetch<T> com estados",
+        "Filtros (busca e ordenacao)",
+        "Componentes reutilizaveis tipados",
+        "Fluxo de dados explicado"
+      ]
+    },
+    {
+      "id": "s07-desafiador",
+      "level": 4,
+      "category": "backend",
+      "title": "Algoritmo e estrutura de dados com testes",
+      "task": "Implemente em TypeScript uma estrutura de dados `LRUCache<K, V>` com get e put em O(1), usando Map e uma lista encadeada manual ou Map com ordenacao. Adicione validacao de capacidade. Escreva testes unitarios (Jest) que cubram: insercao, acesso, evict do LRU, e atualizacao. Explique a complexidade de tempo.",
+      "checkpoints": [
+        "Implementacao LRUCache O(1)",
+        "get/put corretos",
+        "Evict do LRU",
+        "Testes Jest abrangentes",
+        "Explicacao da complexidade"
+      ]
+    },
+    {
+      "id": "s08-desafiador",
+      "level": 4,
+      "category": "fullstack",
+      "title": "Feature full-stack integrada (backend + frontend)",
+      "task": "Projete uma feature completa de 'carrinho de compras': (a) backend - API com endpoints para adicionar/remover/consultar itens do carrinho com validacao e tipos; (b) frontend - componente React que consome essa API, mantem estado, calcula total e exibe a lista. Forneca os arquivos de backend e frontend, a tipagem compartilhada dos tipos de dominio, e o fluxo de comunicacao. Explique como integrar as partes.",
+      "checkpoints": [
+        "Backend com endpoints do carrinho",
+        "Frontend consumindo a API",
+        "Tipagem de dominio compartilhada",
+        "Calculo de total no frontend",
+        "Explicacao da integracao"
+      ]
+    },
+    {
+      "id": "s09-extremo",
+      "level": 5,
+      "category": "fullstack",
+      "title": "Debug e correcao de codigo com bugs",
+      "task": "Analise o codigo abaixo, identifique TODOS os bugs (logicos, de tipagem, de seguranca, de performance) e apresente uma versao corrigida e refatorada com TypeScript. Explique cada bug encontrado e a correcao.\n\n```ts\n// app.ts\nimport express from 'express';\nconst app = express();\napp.use(express.json());\n\nlet users: any[] = [];\nlet nextId = 0;\n\napp.get('/users', (req, res) => {\n  const q = req.query.search;\n  if (q) {\n    res.json(users.filter(u => u.name.includes(q)));\n  } else {\n    res.json(users);\n  }\n});\n\napp.post('/users', (req, res) => {\n  const user = req.body;\n  user.id = nextId++;\n  users.push(user);\n  res.json(user);\n});\n\napp.get('/users/:id', (req, res) => {\n  const user = users.find(u => u.id === Number(req.params.id));\n  res.json(user);\n});\n\napp.put('/users/:id', (req, res) => {\n  const idx = users.findIndex(u => u.id === Number(req.params.id));\n  if (idx !== -1) {\n    users[idx] = { ...users[idx], ...req.body, id: Number(req.params.id) };\n    res.json(users[idx]);\n  } else {\n    res.status(404).send();\n  }\n});\n\napp.listen(3000);\n```",
+      "checkpoints": [
+        "Identifica bugs de tipagem (any)",
+        "Identifica bugs logicos (find, comparacao)",
+        "Identifica problema de seguranca (NoSQL/XSS/validação)",
+        "Identifica problema de performance",
+        "Versao corrigida tipada e refatorada",
+        "Explica cada bug e correcao"
+      ]
+    },
+    {
+      "id": "s10-extremo",
+      "level": 5,
+      "category": "fullstack",
+      "title": "Arquitetura completa full-stack (design de sistema)",
+      "task": "Projete a arquitetura completa de um sistema de 'gerenciador de tarefas' full-stack com TypeScript, cobrindo: (1) modelagem de dados e tipos de dominio; (2) backend Node/Express com rotas, validacao, servico e persistencia; (3) frontend React com gerenciamento de estado, listagem, criacao e edicao de tarefas; (4) tratamento de erros em toda a stack; (5) estrutura de pastas do monorepo; e (6) consideracoes de seguranca e escalabilidade. Entregue o design e os arquivos principais de cada camada, com explicacoes arquiteturais.",
+      "checkpoints": [
+        "Modelagem de dados e tipos",
+        "Backend completo com camadas",
+        "Frontend com estado e CRUD",
+        "Tratamento de erros na stack",
+        "Estrutura de monorepo",
+        "Seguranca e escalabilidade",
+        "Explicacoes arquiteturais"
+      ]
+    }
+  ]
+}

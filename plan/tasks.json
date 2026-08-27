@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "api_base": "http://localhost:1234/v1",
+    "created": "2026-08-20",
+    "note": "Conjunto padronizado de tarefas. Não altere entre modelos para comparação justa."
+  },
+  "params": {
+    "temperature": 0.2,
+    "max_tokens": 8000
+  },
+  "tasks": [
+    {
+      "id": "backend-01",
+      "category": "backend",
+      "title": "API REST com Express + TypeScript",
+      "task": "Escreva uma API REST minimalista em Node.js com TypeScript e Express que gerencie uma lista de tarefas (todos). Deve ter endpoints para: listar todas as tarefas, criar uma tarefa (com validação de título obrigatório), marcar uma tarefa como concluída e excluir uma tarefa. Use um array em memória como persistência. Forneça o código completo, incluindo a definição de tipos, a configuração do servidor e a estrutura de pastas recomendada. Explique como rodar o projeto.",
+      "checkpoints": [
+        "Endpoints REST completos (listar, criar, concluir, excluir)",
+        "Validação de entrada (título obrigatório)",
+        "Tipagem TypeScript correta (interfaces/types)",
+        "Estrutura de pastas e código executável",
+        "Instruções para rodar"
+      ]
+    },
+    {
+      "id": "backend-02",
+      "category": "backend",
+      "title": "Serviço com TypeScript: tratamento de erros",
+      "task": "Crie uma função TypeScript assíncrona chamada `fetchUserData(userId: string): Promise<User>` que busca dados de um usuário em uma API externa usando fetch. Ela deve: tratar erros de rede e de status HTTP não-2xx, lançar uma exceção tipada customizada (`UserNotFoundError`), e ter um timeout de 5 segundos. Defina a interface `User` com campos id, name e email. Escreva também um exemplo de uso com try/catch.",
+      "checkpoints": [
+        "Função assíncrona tipada com Promise<User>",
+        "Tratamento de erro de rede e de status HTTP",
+        "Exceção tipada customizada (UserNotFoundError)",
+        "Timeout de 5s implementado",
+        "Exemplo de uso com try/catch"
+      ]
+    },
+    {
+      "id": "backend-03",
+      "category": "backend",
+      "title": "Tipos utilitários e genéricos",
+      "task": "Usando os tipos utilitários do TypeScript (Partial, Pick, Omit, Readonly, ReturnType), escreva exemplos aplicados a uma interface `Product` com id, name, price, stock e createdAt. Para cada utilitário, mostre um tipo derivado e um pequeno uso prático. Explique em português o que cada um faz.",
+      "checkpoints": [
+        "Usa Partial, Pick, Omit, Readonly e ReturnType",
+        "Aplica cada um à interface Product",
+        "Exemplo prático de uso de cada tipo",
+        "Explicações corretas em português"
+      ]
+    },
+    {
+      "id": "backend-04",
+      "category": "backend",
+      "title": "Refatoração e boas práticas",
+      "task": "Refatore o código abaixo para TypeScript com boas práticas: separe em módulos, adicione tipagem, trate erros e torne testável. Explique as mudanças.\n\n```js\nconst users = [];\nfunction saveUser(name, email) {\n  users.push({ name: name, email: email });\n  return users.length;\n}\nfunction findUser(email) {\n  for (let i = 0; i < users.length; i++) {\n    if (users[i].email === email) {\n      return users[i];\n    }\n  }\n  return null;\n}\n```",
+      "checkpoints": [
+        "Separa em módulos/arquivos",
+        "Adiciona tipagem TypeScript",
+        "Trata erros e validações",
+        "Código testável",
+        "Explica as mudanças"
+      ]
+    },
+    {
+      "id": "frontend-01",
+      "category": "frontend",
+      "title": "Componente React com TypeScript",
+      "task": "Crie um componente React funcional em TypeScript chamado `TodoList` que recebe uma prop `initialItems: Todo[]` (onde `Todo = { id: number; text: string; done: boolean }`). O componente deve permitir adicionar novos itens via input, marcar itens como concluídos com um checkbox, e remover itens. Use useState e hooks apropriados. Forneça o código completo tipado e uma breve explicação.",
+      "checkpoints": [
+        "Componente funcional tipado com React.FC ou função",
+        "Props tipadas (initialItems: Todo[])",
+        "Adicionar, marcar concluído e remover itens",
+        "Uso correto de useState",
+        "Explicação breve"
+      ]
+    },
+    {
+      "id": "frontend-02",
+      "category": "frontend",
+      "title": "Custom hook com useEffect",
+      "task": "Escreva um custom hook TypeScript chamado `useDebounce<T>(value: T, delay: number): T` que retorna o valor após um atraso (debounce), usando useEffect e useState. Em seguida, mostre um exemplo de uso em um componente de busca que filtra uma lista a partir de um input, usando esse hook.",
+      "checkpoints": [
+        "Hook genérico useDebounce<T>",
+        "Uso correto de useEffect e setTimeout/cleanup",
+        "Exemplo de uso em componente de busca",
+        "Tipagem correta"
+      ]
+    },
+    {
+      "id": "frontend-03",
+      "category": "frontend",
+      "title": "Props, eventos e estado",
+      "task": "Crie um componente React com TypeScript que contém um formulário de login com dois campos (email e senha). Ao submeter, valide se o email contém '@' e se a senha tem pelo menos 6 caracteres. Em caso de erro, mostre mensagens de validação. Em caso de sucesso, chame uma prop `onLogin(email: string): void`. Forneça código completo tipado.",
+      "checkpoints": [
+        "Formulário com email e senha",
+        "Validação de email e senha",
+        "Mensagens de erro de validação",
+        "Chama prop onLogin no sucesso",
+        "Código tipado"
+      ]
+    },
+    {
+      "id": "frontend-04",
+      "category": "frontend",
+      "title": "Renderização condicional e listas",
+      "task": "Escreva um componente React com TypeScript `Dashboard` que recebe uma prop `stats: { label: string; value: number }[]`. Renderize: um título, uma lista das stats com chave única, e uma mensagem condicional 'Sem dados' caso o array esteja vazio. Se algum valor for maior que 100, destaque esse item (ex.: cor diferente). Explique o uso de keys.",
+      "checkpoints": [
+        "Renderização de lista com key única",
+        "Renderização condicional (Sem dados)",
+        "Destaque para valores > 100",
+        "Props tipadas",
+        "Explica uso de keys"
+      ]
+    }
+  ]
+}

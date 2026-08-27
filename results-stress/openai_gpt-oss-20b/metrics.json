@@ -1,0 +1,147 @@
+﻿{
+    "meta":  {
+                 "model":  "openai/gpt-oss-20b",
+                 "api":  "http://localhost:1234/v1",
+                 "date":  "2026-08-20 21:10:53",
+                 "params":  {
+                                "temperature":  0.2,
+                                "max_tokens":  8000
+                            },
+                 "reasoning":  "default",
+                 "endpoint":  "OpenAI-compat /v1/chat/completions",
+                 "total_tasks":  10,
+                 "tasks_per_category":  "backend=4, frontend=3, fullstack=3"
+             },
+    "metrics":  [
+                    {
+                        "id":  "s01-basico",
+                        "category":  "backend",
+                        "title":  "Tipos avancados e genericos",
+                        "model":  "openai/gpt-oss-20b",
+                        "latency_s":  29.218,
+                        "prompt_tokens":  193,
+                        "completion_tokens":  1245,
+                        "total_tokens":  1438,
+                        "tps":  42.61,
+                        "finish_reason":  "stop",
+                        "raw_file":  "s01-basico.md"
+                    },
+                    {
+                        "id":  "s02-basico",
+                        "category":  "frontend",
+                        "title":  "Componente com hooks avancados",
+                        "model":  "openai/gpt-oss-20b",
+                        "latency_s":  9.549,
+                        "prompt_tokens":  175,
+                        "completion_tokens":  1690,
+                        "total_tokens":  1865,
+                        "tps":  176.98,
+                        "finish_reason":  "stop",
+                        "raw_file":  "s02-basico.md"
+                    },
+                    {
+                        "id":  "s03-intermediario",
+                        "category":  "backend",
+                        "title":  "Servico com injeÃ§Ã£o de dependencia e padrÃµes",
+                        "model":  "openai/gpt-oss-20b",
+                        "latency_s":  12.422,
+                        "prompt_tokens":  195,
+                        "completion_tokens":  2208,
+                        "total_tokens":  2403,
+                        "tps":  177.75,
+                        "finish_reason":  "stop",
+                        "raw_file":  "s03-intermediario.md"
+                    },
+                    {
+                        "id":  "s04-intermediario",
+                        "category":  "frontend",
+                        "title":  "App React com roteamento e estado global",
+                        "model":  "openai/gpt-oss-20b",
+                        "latency_s":  12.099,
+                        "prompt_tokens":  184,
+                        "completion_tokens":  2168,
+                        "total_tokens":  2352,
+                        "tps":  179.19,
+                        "finish_reason":  "stop",
+                        "raw_file":  "s04-intermediario.md"
+                    },
+                    {
+                        "id":  "s05-avancado",
+                        "category":  "backend",
+                        "title":  "API REST completa com validacao, banco e testes",
+                        "model":  "openai/gpt-oss-20b",
+                        "latency_s":  19.493,
+                        "prompt_tokens":  210,
+                        "completion_tokens":  3421,
+                        "total_tokens":  3631,
+                        "tps":  175.5,
+                        "finish_reason":  "stop",
+                        "raw_file":  "s05-avancado.md"
+                    },
+                    {
+                        "id":  "s06-avancado",
+                        "category":  "frontend",
+                        "title":  "Dashboard React com fetching, filtros e componentes reutilizaveis",
+                        "model":  "openai/gpt-oss-20b",
+                        "latency_s":  14.869,
+                        "prompt_tokens":  190,
+                        "completion_tokens":  2612,
+                        "total_tokens":  2802,
+                        "tps":  175.67,
+                        "finish_reason":  "stop",
+                        "raw_file":  "s06-avancado.md"
+                    },
+                    {
+                        "id":  "s07-desafiador",
+                        "category":  "backend",
+                        "title":  "Algoritmo e estrutura de dados com testes",
+                        "model":  "openai/gpt-oss-20b",
+                        "latency_s":  10.135,
+                        "prompt_tokens":  196,
+                        "completion_tokens":  1776,
+                        "total_tokens":  1972,
+                        "tps":  175.23,
+                        "finish_reason":  "stop",
+                        "raw_file":  "s07-desafiador.md"
+                    },
+                    {
+                        "id":  "s08-desafiador",
+                        "category":  "fullstack",
+                        "title":  "Feature full-stack integrada (backend + frontend)",
+                        "model":  "openai/gpt-oss-20b",
+                        "latency_s":  17.409,
+                        "prompt_tokens":  207,
+                        "completion_tokens":  3081,
+                        "total_tokens":  3288,
+                        "tps":  176.98,
+                        "finish_reason":  "stop",
+                        "raw_file":  "s08-desafiador.md"
+                    },
+                    {
+                        "id":  "s09-extremo",
+                        "category":  "fullstack",
+                        "title":  "Debug e correcao de codigo com bugs",
+                        "model":  "openai/gpt-oss-20b",
+                        "latency_s":  12.601,
+                        "prompt_tokens":  413,
+                        "completion_tokens":  2227,
+                        "total_tokens":  2640,
+                        "tps":  176.73,
+                        "finish_reason":  "stop",
+                        "raw_file":  "s09-extremo.md"
+                    },
+                    {
+                        "id":  "s10-extremo",
+                        "category":  "fullstack",
+                        "title":  "Arquitetura completa full-stack (design de sistema)",
+                        "model":  "openai/gpt-oss-20b",
+                        "latency_s":  31.33,
+                        "prompt_tokens":  244,
+                        "completion_tokens":  5453,
+                        "total_tokens":  5697,
+                        "tps":  174.05,
+                        "finish_reason":  "stop",
+                        "raw_file":  "s10-extremo.md"
+                    }
+                ]
+}

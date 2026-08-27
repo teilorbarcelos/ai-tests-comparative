@@ -1,0 +1,121 @@
+﻿{
+    "meta":  {
+                 "model":  "google/gemma-4-e4b",
+                 "api":  "http://localhost:1234/v1",
+                 "date":  "2026-08-23 16:08:48",
+                 "params":  {
+                                "temperature":  0.2,
+                                "max_tokens":  8000
+                            },
+                 "reasoning":  "default",
+                 "endpoint":  "OpenAI-compat /v1/chat/completions",
+                 "total_tasks":  8,
+                 "tasks_per_category":  "backend=4, frontend=4"
+             },
+    "metrics":  [
+                    {
+                        "id":  "backend-01",
+                        "category":  "backend",
+                        "title":  "API REST com Express + TypeScript",
+                        "model":  "google/gemma-4-e4b",
+                        "latency_s":  37.226,
+                        "prompt_tokens":  153,
+                        "completion_tokens":  3505,
+                        "total_tokens":  3658,
+                        "tps":  94.16,
+                        "finish_reason":  "stop",
+                        "raw_file":  "backend-01.md"
+                    },
+                    {
+                        "id":  "backend-02",
+                        "category":  "backend",
+                        "title":  "ServiÃ§o com TypeScript: tratamento de erros",
+                        "model":  "google/gemma-4-e4b",
+                        "latency_s":  25.7,
+                        "prompt_tokens":  153,
+                        "completion_tokens":  2623,
+                        "total_tokens":  2776,
+                        "tps":  102.06,
+                        "finish_reason":  "stop",
+                        "raw_file":  "backend-02.md"
+                    },
+                    {
+                        "id":  "backend-03",
+                        "category":  "backend",
+                        "title":  "Tipos utilitÃ¡rios e genÃ©ricos",
+                        "model":  "google/gemma-4-e4b",
+                        "latency_s":  26.075,
+                        "prompt_tokens":  127,
+                        "completion_tokens":  2644,
+                        "total_tokens":  2771,
+                        "tps":  101.4,
+                        "finish_reason":  "stop",
+                        "raw_file":  "backend-03.md"
+                    },
+                    {
+                        "id":  "backend-04",
+                        "category":  "backend",
+                        "title":  "RefatoraÃ§Ã£o e boas prÃ¡ticas",
+                        "model":  "google/gemma-4-e4b",
+                        "latency_s":  31.58,
+                        "prompt_tokens":  189,
+                        "completion_tokens":  3155,
+                        "total_tokens":  3344,
+                        "tps":  99.9,
+                        "finish_reason":  "stop",
+                        "raw_file":  "backend-04.md"
+                    },
+                    {
+                        "id":  "frontend-01",
+                        "category":  "frontend",
+                        "title":  "Componente React com TypeScript",
+                        "model":  "google/gemma-4-e4b",
+                        "latency_s":  31.39,
+                        "prompt_tokens":  138,
+                        "completion_tokens":  3141,
+                        "total_tokens":  3279,
+                        "tps":  100.06,
+                        "finish_reason":  "stop",
+                        "raw_file":  "frontend-01.md"
+                    },
+                    {
+                        "id":  "frontend-02",
+                        "category":  "frontend",
+                        "title":  "Custom hook com useEffect",
+                        "model":  "google/gemma-4-e4b",
+                        "latency_s":  26.049,
+                        "prompt_tokens":  121,
+                        "completion_tokens":  2618,
+                        "total_tokens":  2739,
+                        "tps":  100.5,
+                        "finish_reason":  "stop",
+                        "raw_file":  "frontend-02.md"
+                    },
+                    {
+                        "id":  "frontend-03",
+                        "category":  "frontend",
+                        "title":  "Props, eventos e estado",
+                        "model":  "google/gemma-4-e4b",
+                        "latency_s":  29.283,
+                        "prompt_tokens":  136,
+                        "completion_tokens":  2941,
+                        "total_tokens":  3077,
+                        "tps":  100.43,
+                        "finish_reason":  "stop",
+                        "raw_file":  "frontend-03.md"
+                    },
+                    {
+                        "id":  "frontend-04",
+                        "category":  "frontend",
+                        "title":  "RenderizaÃ§Ã£o condicional e listas",
+                        "model":  "google/gemma-4-e4b",
+                        "latency_s":  29.115,
+                        "prompt_tokens":  137,
+                        "completion_tokens":  2912,
+                        "total_tokens":  3049,
+                        "tps":  100.02,
+                        "finish_reason":  "stop",
+                        "raw_file":  "frontend-04.md"
+                    }
+                ]
+}
