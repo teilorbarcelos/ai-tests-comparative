@@ -1,0 +1,12 @@
+{
+  "name": "backend02-test",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "test": "node dist/test.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "@types/node": "^20.6.3"
+  }
+}

@@ -15,10 +15,11 @@ Ranking consolidado dos modelos avaliados com o [plano padronizado](plan/README.
 |---|---|---|---|---|---|---|
 | 1 | **openai/gpt-oss-20b** | 2026-08-20 | **9.4** | 151.9 | 14.1 | Mais rápido + qualidade top |
 | 2 | **google/gemma-4-e4b** | 2026-08-23 | **9.4** | 99.8 | 29.6 | Qualidade top, mais verboso |
-| 3 | **qwen3.8-9b-distill** | 2026-08-26 | **9.0** | 90.5 | 24.5 | Melhor custo-benefício pequeno |
-| 4 | **qwen/qwen3-14b** (reasoning on) | 2026-08-20 | **9.0** | 14.9 | 131.1 | Qualidade boa, muito lento |
-| 5 | **deepseek/deepseek-r1-0528-qwen3-8b** | 2026-08-24 | **8.6** | 83.1 | 28.9 | Respostas diretas, alguns bugs |
-| 6 | **qwen/qwen3.5-9b** | 2026-08-20 | **8.6** | 77.2 | 21.4 | Sólido, sem brilho |
+| 3 | **mistralai/devstral-small-2-2512** | 2026-09-27 | **9.1** | 35.0 | 33.2 | Melhor frontend (9.5), lento |
+| 4 | **qwen3.8-9b-distill** | 2026-08-26 | **9.0** | 90.5 | 24.5 | Melhor custo-benefício pequeno |
+| 5 | **qwen/qwen3-14b** (reasoning on) | 2026-08-20 | **9.0** | 14.9 | 131.1 | Qualidade boa, muito lento |
+| 6 | **deepseek/deepseek-r1-0528-qwen3-8b** | 2026-08-24 | **8.6** | 83.1 | 28.9 | Respostas diretas, alguns bugs |
+| 7 | **qwen/qwen3.5-9b** | 2026-08-20 | **8.6** | 77.2 | 21.4 | Sólido, sem brilho |
 
 > O `qwen/qwen3-14b (reasoning off)` é um experimento de velocidade (sem nota) — veja
 > `results/COMPARATIVO.md`.
@@ -38,7 +39,15 @@ Ranking consolidado dos modelos avaliados com o [plano padronizado](plan/README.
 - Respostas verbosas e muito bem explicadas; superou o GPT-OSS no `frontend-04` (key estável).
 - **Fraqueza**: `any` no `backend-01` e sem exemplo de teste concreto no `backend-04`.
 
-### 3. qwen3.8-9b-distill — 🥉 Melhor entre os "pequenos"
+### 3. mistralai/devstral-small-2-2512 — 🥉 Melhor frontend, mas lento
+- **Nota**: 9.1 (backend 8.6 · frontend 9.5) · **tps**: 35 · **Lat.**: 33s
+- Frontend impecável: nota 9.5 em todas as 4 tarefas; `key={stat.label}` estável no `frontend-04`.
+- Sem modo reasoning (modelo mais simples, direto ao ponto).
+- **Fraqueza**: backend precisa de ajustes de tipagem para compilar em `strict` (1 import ausente
+  real no `backend-04`; `@types/cors` ausente no `backend-01`) e **throughput baixo (~35 tps)** —
+  o mais lento do comparativo padrão, apesar de rodar em GPU.
+
+### 4. qwen3.8-9b-distill — 🥉 Melhor entre os "pequenos"
 - **Nota**: 9.0 (backend 8.9 · frontend 9.1) · **tps**: 91 · **Lat.**: 25s
 - Boas explicações (tabelas) e testes Jest no `backend-04`. Melhor explicação de `key`.
 - **Fraqueza**: 2 bugs reais no `backend-01` (`req.todo` inexistente e mismatch ObjectId/UUID

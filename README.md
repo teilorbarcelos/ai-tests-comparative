@@ -169,6 +169,7 @@ avaliado — o histórico fica versionado no git.
 |---|---|---|---|---|---|---|---|---|
 | openai/gpt-oss-20b | 2026-08-20 | default | 14.10 | 151.9 | 9804 | 9.5 | 9.2 | 9.4 |
 | google/gemma-4-e4b | 2026-08-23 | default (reasoning on) | 29.55 | 99.8 | 23539 | 9.4 | 9.5 | 9.4 |
+| mistralai/devstral-small-2-2512 | 2026-09-27 | default (sem reasoning) | 33.24 | 35.0 | 9234 | 8.6 | 9.5 | 9.1 |
 | qwen3.8-9b-distill | 2026-08-26 | default (reasoning on) | 24.53 | 90.5 | 17903 | 8.9 | 9.1 | 9.0 |
 | deepseek/deepseek-r1-0528-qwen3-8b | 2026-08-24 | default (reasoning on) | 28.88 | 83.1 | 19074 | 8.6 | 8.5 | 8.6 |
 | qwen/qwen3.5-9b | 2026-08-20 | default | 21.41 | 77.2 | 13056 | 8.5 | 8.6 | 8.6 |
@@ -196,6 +197,20 @@ e-commerce, carrinho full-stack, hooks, SPA auth, dashboard, monorepo, etc.). Re
 - Nenhum defeito nas tarefas de frontend puro (s02, s04, s06).
 
 Detalhes em [`execution-validation/README.md`](execution-validation/README.md).
+
+### Devstral Small 2 (plano padrão)
+
+O código gerado pelo **mistralai/devstral-small-2-2512** no plano padrão também foi validado por
+execução real em `execution-validation-devstral/` (4 fases: API todos, `fetchUserData`, refatoração
+com DI, componentes React). Resumo:
+
+- **Compila e roda em todas as fases** após correções mínimas.
+- Defeitos mais comuns: **tipagem strict mode** (6 correções de 1 token/cast) — 1 import ausente
+  real (`UserBuilder` no backend-04) e 1 dependência de tipos ausente (`@types/cors` no backend-01).
+- **Nenhuma lógica de negócio com falha estrutural**; frontend puro (4 componentes) sem bugs,
+  todos renderizando corretamente (9/9 asserções SSR).
+
+Detalhes em [`execution-validation-devstral/README.md`](execution-validation-devstral/README.md).
 
 ---
 

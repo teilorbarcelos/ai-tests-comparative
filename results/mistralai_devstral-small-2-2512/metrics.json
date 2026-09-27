@@ -1,0 +1,121 @@
+﻿{
+    "meta":  {
+                 "model":  "mistralai/devstral-small-2-2512",
+                 "api":  "http://localhost:1234/v1",
+                 "date":  "2026-09-27 09:33:33",
+                 "params":  {
+                                "temperature":  0.2,
+                                "max_tokens":  8000
+                            },
+                 "reasoning":  "default",
+                 "endpoint":  "OpenAI-compat /v1/chat/completions",
+                 "total_tasks":  8,
+                 "tasks_per_category":  "backend=4, frontend=4"
+             },
+    "metrics":  [
+                    {
+                        "id":  "backend-01",
+                        "category":  "backend",
+                        "title":  "API REST com Express + TypeScript",
+                        "model":  "mistralai/devstral-small-2-2512",
+                        "latency_s":  56.391,
+                        "prompt_tokens":  157,
+                        "completion_tokens":  1863,
+                        "total_tokens":  2020,
+                        "tps":  33.04,
+                        "finish_reason":  "stop",
+                        "raw_file":  "backend-01.md"
+                    },
+                    {
+                        "id":  "backend-02",
+                        "category":  "backend",
+                        "title":  "ServiÃ§o com TypeScript: tratamento de erros",
+                        "model":  "mistralai/devstral-small-2-2512",
+                        "latency_s":  22.787,
+                        "prompt_tokens":  150,
+                        "completion_tokens":  788,
+                        "total_tokens":  938,
+                        "tps":  34.58,
+                        "finish_reason":  "stop",
+                        "raw_file":  "backend-02.md"
+                    },
+                    {
+                        "id":  "backend-03",
+                        "category":  "backend",
+                        "title":  "Tipos utilitÃ¡rios e genÃ©ricos",
+                        "model":  "mistralai/devstral-small-2-2512",
+                        "latency_s":  33.5,
+                        "prompt_tokens":  121,
+                        "completion_tokens":  1161,
+                        "total_tokens":  1282,
+                        "tps":  34.66,
+                        "finish_reason":  "stop",
+                        "raw_file":  "backend-03.md"
+                    },
+                    {
+                        "id":  "backend-04",
+                        "category":  "backend",
+                        "title":  "RefatoraÃ§Ã£o e boas prÃ¡ticas",
+                        "model":  "mistralai/devstral-small-2-2512",
+                        "latency_s":  46.146,
+                        "prompt_tokens":  166,
+                        "completion_tokens":  1589,
+                        "total_tokens":  1755,
+                        "tps":  34.43,
+                        "finish_reason":  "stop",
+                        "raw_file":  "backend-04.md"
+                    },
+                    {
+                        "id":  "frontend-01",
+                        "category":  "frontend",
+                        "title":  "Componente React com TypeScript",
+                        "model":  "mistralai/devstral-small-2-2512",
+                        "latency_s":  31.879,
+                        "prompt_tokens":  140,
+                        "completion_tokens":  1132,
+                        "total_tokens":  1272,
+                        "tps":  35.51,
+                        "finish_reason":  "stop",
+                        "raw_file":  "frontend-01.md"
+                    },
+                    {
+                        "id":  "frontend-02",
+                        "category":  "frontend",
+                        "title":  "Custom hook com useEffect",
+                        "model":  "mistralai/devstral-small-2-2512",
+                        "latency_s":  30.543,
+                        "prompt_tokens":  117,
+                        "completion_tokens":  1092,
+                        "total_tokens":  1209,
+                        "tps":  35.75,
+                        "finish_reason":  "stop",
+                        "raw_file":  "frontend-02.md"
+                    },
+                    {
+                        "id":  "frontend-03",
+                        "category":  "frontend",
+                        "title":  "Props, eventos e estado",
+                        "model":  "mistralai/devstral-small-2-2512",
+                        "latency_s":  25.326,
+                        "prompt_tokens":  132,
+                        "completion_tokens":  912,
+                        "total_tokens":  1044,
+                        "tps":  36.01,
+                        "finish_reason":  "stop",
+                        "raw_file":  "frontend-03.md"
+                    },
+                    {
+                        "id":  "frontend-04",
+                        "category":  "frontend",
+                        "title":  "RenderizaÃ§Ã£o condicional e listas",
+                        "model":  "mistralai/devstral-small-2-2512",
+                        "latency_s":  19.386,
+                        "prompt_tokens":  134,
+                        "completion_tokens":  697,
+                        "total_tokens":  831,
+                        "tps":  35.95,
+                        "finish_reason":  "stop",
+                        "raw_file":  "frontend-04.md"
+                    }
+                ]
+}
