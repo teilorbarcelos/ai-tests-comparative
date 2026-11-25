@@ -169,6 +169,7 @@ avaliado — o histórico fica versionado no git.
 |---|---|---|---|---|---|---|---|---|
 | openai/gpt-oss-20b | 2026-08-20 | default | 14.10 | 151.9 | 9804 | 9.5 | 9.2 | 9.4 |
 | google/gemma-4-e4b | 2026-08-23 | default (reasoning on) | 29.55 | 99.8 | 23539 | 9.4 | 9.5 | 9.4 |
+| thinkingmachines/inkling-2-mini | 2026-11-25 | default (reasoning high) | 194.07 | 16.2 | 25280 | 9.4 | 9.4 | 9.4 |
 | mistralai/devstral-small-2-2512 | 2026-09-27 | default (sem reasoning) | 33.24 | 35.0 | 9234 | 8.6 | 9.5 | 9.1 |
 | qwen3.8-9b-distill | 2026-08-26 | default (reasoning on) | 24.53 | 90.5 | 17903 | 8.9 | 9.1 | 9.0 |
 | deepseek/deepseek-r1-0528-qwen3-8b | 2026-08-24 | default (reasoning on) | 28.88 | 83.1 | 19074 | 8.6 | 8.5 | 8.6 |
